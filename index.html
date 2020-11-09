@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Virtual</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="contenedor-header">
+            <h1>Campus<span>Virtual</span></h1>
+            <p>Excelencia Académica</p>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="contenedor-header">
+            <h2><i class="fas fa-pen-fancy"></i> Examen Integrador</h2>
+            <p><i class="far fa-hand-point-right"></i> Modalidad: Virtual</p>
+            <p><i class="far fa-hand-point-right"></i> Duración: 2h 30min</p>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <section class="instructivo centrar-contenido">
+            <h2>Instructivo</h2>
+            <ol>
+                <li>En este examen integrador usted deberá rendir 5 asignaturas en el siguiente orden: Historia, Lengua y Literatura, Matemática, Química y Física.</li>
+                <li>Cada asignatura cuenta con 5 preguntas, de las cuales debe contestar al menos 3 correctamente para aprobar.</li>
+                <li>Solo se deberán recuperar las asignaturas en las que no se haya alcanzado el aprobado.</li>
+                <li>Dispone de 2:30hs para completar todo el examen.</li>
+            </ol>
+            <div>
+                <input type="checkbox" id="pautas-examen" value="1">
+                <label for="pautas-examen">He leido y comprendido las pautas del examen integrador.</label>
+            </div>
+        </section>
+
+        <main class="centrar-contenido">
+            <form action="#" class="contacto" method="POST">
+                <fieldset class="campo-personal">
+                    <legend>Información Personal</legend>
+                    <p>Estimado alumno, por favor ingrese sus datos: </p>
+
+                    <label for="nombre">Nombre/s:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Su Nombre" class="estilo-input">
+                    <div id="error-nombre" class="campo-obligatorio"></div>
+
+                    <label for="apellido">Apellido/s:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Su Apellido" class="estilo-input">
+                    <div id="error-apellido" class="campo-obligatorio"></div>
+
+                    <label for="legajo">Legajo:</label>
+                    <input type="number" name="legajo" id="legajo" min="0" placeholder="Su Legajo" class="estilo-input">
+                    <div id="error-legajo" class="campo-obligatorio"></div>
+
+                    <label for="correo">E-mail:</label>
+                    <input type="email" name="correo" id="correo" placeholder="Su Correo" class="estilo-input">
+                    <div id="error-correo" class="campo-obligatorio"></div>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Su Teléfono" class="estilo-input">
+                    <div id="error-telefono" class="campo-obligatorio"></div>
+
+                    <div class="declaracion-jurada">
+                        <input type="checkbox" id="acepto" value="1">
+                        <label for="acepto"> Declaro estar en condiciones de rendir el examen integrador.</label>
+                    </div>
+
+                    <input type="button" id="btnPersonal" class="boton" value="Comenzar">
+                </fieldset>
+
+                <fieldset class="campo-resultados">
+                    <legend><i class="fas fa-poll"></i> Resultados</legend>
+                        <div id="resultado-historia">
+                            <p id="asignatura-1" class="asignatura">Historia </p>
+                            <p id="correctas-1">Respuestas correctas: </p>
+                            <p>Condición: <span id="calificacion-1" class="calificacion-final"></span> </p>
+                        </div>
+                        <div id="resultado-lengua">
+                            <p id="asignatura-2" class="asignatura">Lengua y Literatura </p>
+                            <p id="correctas-2">Respuestas correctas: </p>
+                            <p>Condición: <span id="calificacion-2" class="calificacion-final"></span></p>
+                        </div>
+                        <div id="resultado-matematica">
+                            <p id="asignatura-3" class="asignatura">Matemática </p>
+                            <p id="correctas-3">Respuestas correctas: </p>
+                            <p>Condición: <span id="calificacion-3" class="calificacion-final"></span></p>
+                        </div>
+                        <div id="resultado-quimica">
+                            <p id="asignatura-4" class="asignatura">Química </p>
+                            <p id="correctas-4">Respuestas correctas: </p>
+                            <p>Condición: <span id="calificacion-4" class="calificacion-final"></span></p>
+                        </div>
+                        <div id="resultado-fisica">
+                            <p id="asignatura-5" class="asignatura">Física </p>
+                            <p id="correctas-5">Respuestas correctas: </p>
+                            <p>Condición: <span id="calificacion-5" class="calificacion-final"></span></p>
+                        </div>
+                        <div><p id="detalle">A continuación se muestra el detalle de sus respuestas:</p></div>
+                </fieldset>
+
+                <fieldset class="campo-historia">
+                    <legend> <i class="fas fa-university"></i> Historia</legend>
+                    <ul>
+                        <li>
+                            <label for="h1">¿En qué año se produjo la crisis financiera conocida como "La Gran Depresión"?</label>
+                            <input type="number" name="h1" min="0" id="h1" class="estilo-input historia">
+
+                            <div id="resultado-h1" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cuáles de estos países conformaban el bando de los Aliados en la Segunda Guerra Mundial? (Marque todas las correctas)</p>
+                            <div>
+                                <input type="checkbox" name="h2" value="right" id="h2a"> <label for="h2a" class="ok">Estados Unidos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="h2" value="wrong" id="h2b"> <label for="h2b">Italia</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="h2" value="right" id="h2c"> <label for="h2c" class="ok">Francia</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="h2" value="wrong" id="h2d"> <label for="h2d">Japón</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="h2" value="right" id="h2e"> <label for="h2e" class="ok">Gran Bretaña</label>
+                            </div>
+
+                            <div id="resultado-h2" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿En qué ciudad japonesa fue lanzada la segunda bomba atómica en 1945?</p>
+                            <div>
+                                <input type="radio" name="h3" value="wrong" id="h3a"> <label for="h3a">Tokio</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="h3" value="wrong" id="h3b"> <label for="h3b">Hiroshima</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="h3" value="right" id="h3c"> <label for="h3c" class="ok">Nagasaki</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="h3" value="wrong" id="h3d"> <label for="h3d">Osaka</label>
+                            </div>
+
+                            <div id="resultado-h3" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>La Guerra Fría fue entre Estados Unidos y ¿que otra potencia mundial?</p>
+                            <div>
+                                <select name="h4" id="h4" class="historia">
+                                    <option value="" disabled selected>--Seleccione una opción--</option>
+                                    <option value="japon">Japón</option>
+                                    <option value="union-sovietica" class="ok">La Unión Soviética</option>
+                                    <option value="china">China</option>
+                                    <option value="alemania">Alemania</option>
+                                </select>
+                            </div>
+
+                            <div id="resultado-h4" class="div-resultado"></div>
+                        </li>
+
+
+                        <li>
+                            <p>¿Con qué acontecimiento histórico se relaciona la siguiente imagen?</p>
+                            <img src="img/img_historia.jpg" alt="Imagen Historia" class="contenedor-imagen">
+                            <div>
+                                <input type="radio" name="h5" value="pearl-harbour" id="h5a"> <label for="h5a" class="ok">El ataque a Pearl Harbour</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="h5" value="primera-guerra" id="h5b"> <label for="h5b">La Primera Guerra Mundial</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="h5" value="guerra-vietnam" id="h5c"> <label for="h5c">La Guerra de Vietnam</label>
+                            </div>
+
+                            <div id="resultado-h5" class="div-resultado"></div>
+                        </li>
+                    </ul>
+
+                    <input type="button" id="btnHistoria" class="boton boton-historia" value="Continuar">
+                </fieldset>
+
+
+
+                <fieldset class="campo-lengua">
+                    <legend>
+                        <i class="fas fa-book"></i> Lengua y Literatura</legend>
+                    <ul>
+                        <li>
+                            <p class="primer-parrafo">¿Qué es un diptongo?</p>
+                            <div>
+                                <input type="radio" name="l1" value="wrong" id="l1a"> <label for="l1a">La secuencia de dos consonantes</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l1" value="wrong" id="l1b"> <label for="l1b">La rima característica de los sonetos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l1" value="right" id="l1c"> <label for="l1c" class="ok">La secuencia de dos vocales distintas que se pronuncian dentro de una misma sílaba</label>
+                            </div>
+
+                            <div id="resultado-l1" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cuál de los siguientes términos hace referencia al estudio del significado de las distintas expresiones linguísticas?</p>
+                            <div>
+                                <select name="l2" id="l2" class="lengua">
+                                    <option value="" disabled selected>--Seleccione una opción--</option>
+                                    <option value="sintactica">Sintáctica</option>
+                                    <option value="semantica" class="ok">Semántica</option>
+                                    <option value="morfologia">Morfología</option>
+                                    <option value="logica">Lógica</option>
+                                </select>
+                            </div>
+
+                            <div id="resultado-l2" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cuál de estos libros NO fue escrito por Jorge Luis Borges?</p>
+                            <div>
+                                <input type="radio" name="l3" value="wrong" id="l3a"> <label for="l3a">El Aleph</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l3" value="wrong" id="l3b"> <label for="l3b">Ficciones</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l3" value="wrong" id="l3c"> <label for="l3c">Historia de la eternidad</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l3" value="right" id="l3d"> <label for="l3d" class="ok">Rayuela</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="l3" value="wrong" id="l3e"> <label for="l3e">El libro de arena</label>
+                            </div>
+
+                            <div id="resultado-l3" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <label for="l4">¿Cuál es el apellido del autor de la novela titulada "1984"?</label>
+                            <input type="text" name="l4" id="l4" class="estilo-input lengua">
+
+                            <div id="resultado-l4" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cuál de las siguientes imágenes relacionaría con la obra "El Principito" de Antoine de Saint-Exupéry?</p>
+                            <input type="radio" name="l5" value="wrong" id="l5a" class="input-img">
+                            <input type="radio" name="l5" value="wrong" id="l5b" class="input-img">
+                            <input type="radio" name="l5" value="right" id="l5c" class="input-img">
+                            <label for="l5a"><img src="img/img_lengua1.jpg" alt="Imagen Lengua" class="contenedor-imagen efecto-imagen"></label>
+                            <label for="l5b"><img src="img/img_lengua2.jpg" alt="Imagen Lengua" class="contenedor-imagen efecto-imagen"></label>
+                            <label for="l5c"><img src="img/img_lengua3.jpg" alt="Imagen Lengua" class="contenedor-imagen efecto-imagen img-ok"></label>
+
+                            <div id="resultado-l5" class="div-resultado"></div>
+                        </li>
+                    </ul>
+                    <input type="button" id="btnLengua" class="boton boton-lengua" value="Continuar">
+                </fieldset>
+
+
+
+                <fieldset class="campo-matematica">
+                    <legend>
+                        <i class="fas fa-calculator"></i> Matemática</legend>
+                    <ul>
+                        <li>
+                            <label for="m1">Si recibo un descuento del 15% sobre un artículo cuyo precio es $360, ¿cuánto debo pagar?</label>
+                            <input type="number" name="m1" id="m1" class="estilo-input matematica">
+
+                            <div id="resultado-m1" class="div-resultado"></div>
+                        </li>
+                        <li>
+                            <p>Indique cuál de los siguientes gráficos corresponde a una función cuadrática</p>
+                            <input type="radio" name="m2" value="wrong" id="m2a" class="input-img">
+                            <input type="radio" name="m2" value="right" id="m2b" class="input-img">
+                            <input type="radio" name="m2" value="wrong" id="m2c" class="input-img">
+                            <label for="m2a"><img src="img/img_matematica1.jpg" alt="Imagen Matemática" class="contenedor-imagen efecto-imagen"></label>
+                            <label for="m2b"><img src="img/img_matematica2.jpg" alt="Imagen Matemática" class="contenedor-imagen efecto-imagen img-ok"></label>
+                            <label for="m2c"><img src="img/img_matematica3.jpg" alt="Imagen Matemática" class="contenedor-imagen efecto-imagen"></label>
+
+                            <div id="resultado-m2" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cuáles de los siguientes valores de x pertenecen al dominio de la función f(x) = log<sub>10</sub> (x-5) ? (Marque todas las correctas)</p>
+                            <div>
+                                <input type="checkbox" name="m3" value="right" id="m3a"> <label for="m3a" class="ok">x = 10</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="m3" value="wrong" id="m3b"> <label for="m3b">x = 0</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="m3" value="wrong" id="m3c"> <label for="m3c">x = -5</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="m3" value="right" id="m3d"> <label for="m3d" class="ok">x = 7</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="m3" value="wrong" id="m3e"> <label for="m3e">x = 5</label>
+                            </div>
+
+                            <div id="resultado-m3" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>¿Cómo se calcula el área de un círculo de radio r?</p>
+                            <div>
+                                <input type="radio" name="m4" value="wrong" id="m4a"> <label for="m4a">A = 4 . &pi; . r<sup>2</sup> </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="m4" value="right" id="m4b"> <label for="m4b" class="ok">A = &pi; . r<sup>2</sup></label>
+                            </div>
+                            <div>
+                                <input type="radio" name="m4" value="wrong" id="m4c"> <label for="m4c">A = <sup>4</sup>/<sub>3</sub> . &pi; . r<sup>3</sup> </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="m4" value="wrong" id="m4d"> <label for="m4d">A = 2 . &pi; . r</label>
+                            </div>
+
+                            <div id="resultado-m4" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>Si &alpha; = 30° y &beta; = 65°, el valor de &gamma; es: </p>
+                            <img src="img/img_matematica4.jpg" alt="Imagen Matemática" class="contenedor-imagen">
+                            <div>
+                                <select name="m5" id="m5" class="matematica">
+                                    <option value="" disabled selected>--Seleccione una opción--</option>
+                                    <option value="35">&gamma; = 35°</option>
+                                    <option value="65">&gamma; = 65°</option>
+                                    <option value="85" class="ok">&gamma; = 85°</option>
+                                    <option value="90">&gamma; = 90°</option>
+                                </select>
+                            </div>
+
+                            <div id="resultado-m5" class="div-resultado"></div>
+                        </li>
+                    </ul>
+                    <input type="button" id="btnMatematica" class="boton boton-matematica" value="Continuar">
+                </fieldset>
+
+
+
+                <fieldset class="campo-quimica">
+                    <legend>
+                        <i class="fas fa-flask"></i> Química</legend>
+                    <ul>
+                        <li>
+                            <p>A partir del siguiente fragmento de la tabla periódica de los elementos indique: </p>
+                            <img src="img/img_quimica1.jpg" alt="Imagen Quimica" class="contenedor-imagen">
+
+                        
+                            <p>El símbolo químico del elemento mercurio:</p>
+                            <input type="text" name="q1" id="q1" class="estilo-input quimica">
+
+                            <div id="resultado-q1" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>El número atómico (Z) del elemento plata:</p>
+                            <input type="number" name="q2" id="q2" class="estilo-input quimica">
+
+                            <div id="resultado-q2" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>La molaridad (M) se define como:</p>
+                            <div>
+                                <input type="radio" name="q3" value="wrong" id="q3a"> <label for="q3a">M = masa / volumen </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="wrong" id="q3b"> <label for="q3b">M = moles de soluto / kg de disolvente </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="right" id="q3c"> <label for="q3c" class="ok">M = moles de soluto / litros de solución </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="wrong" id="q3d"> <label for="q3d">M = moles de soluto / moles totales</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="wrong" id="q3e"> <label for="q3e">M = gramos de soluto / litros de solución</label>
+                            </div>
+
+                            <div id="resultado-q3" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p> ¿Cuántos gramos de sal se deben disolver en agua si se desea preparar 250mL de una solución con una concentración de 4 g/L?</p>
+                            <select name="q4" id="q4" class="quimica">
+                                <option value="" disabled selected>--Seleccione una opción--</option>
+                                <option value="1" class="ok">1 g</option>
+                                <option value="1,25">1,25 g</option>
+                                <option value="2">2 g</option>
+                                <option value="4">4 g</option>
+                            </select>
+
+                            <div id="resultado-q4" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>Indique cuál es la molécula de la glucosa: </p>
+                            <input type="radio" name="q5" value="wrong" id="q5a" class="input-img">
+                            <input type="radio" name="q5" value="wrong" id="q5b" class="input-img">
+                            <input type="radio" name="q5" value="right" id="q5c" class="input-img">
+                            <label for="q5a"><img src="img/img_quimica2.jpg" alt="Imagen Quimica" class="contenedor-imagen efecto-imagen"></label>
+                            <label for="q5b"><img src="img/img_quimica3.jpg" alt="Imagen Quimica" class="contenedor-imagen efecto-imagen"></label>
+                            <label for="q5c"><img src="img/img_quimica4.jpg" alt="Imagen Quimica" class="contenedor-imagen efecto-imagen img-ok"></label>
+
+                            <div id="resultado-q5" class="div-resultado"></div>
+                        </li>
+
+                    </ul>
+                    <input type="button" id="btnQuimica" class="boton boton-quimica" value="Continuar">
+                </fieldset>
+
+
+
+                <fieldset class="campo-fisica">
+                    <legend>
+                        <i class="fas fa-atom"></i> Física</legend>
+                    <ul>
+                        <li>
+                            <p class="primer-parrafo">¿A cuánto equivale la aceleración de la gravedad en la Tierra?</p>
+                            <div>
+                                <input type="radio" name="f1" value="wrong" id="f1a"> <label for="f1a">g = 1,62 m/s </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f1" value="wrong" id="f1b"> <label for="f1b">g = 1,62 m/s<sup>2</sup> </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f1" value="wrong" id="f1c"> <label for="f1c">g = 9,8 m/s </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f1" value="right" id="f1d"> <label for="f1d" class="ok">g = 9,8 m/s<sup>2</sup> </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f1" value="wrong" id="f1e"> <label for="f1e">g = 10 m/s<sup>2</sup></label>
+                            </div>
+
+                            <div id="resultado-f1" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>A partir de la siguiente imagen responda: </p>
+                            <img src="img/img_fisica1.jpg" alt="Imagen Fisica">
+
+                        
+                            <p>¿Cómo se denomina la fuerza indicada con el vector rojo?</p>
+                            <select name="f2" id="f2" class="fisica">
+                                <option value="" disabled selected>--Seleccione una opción--</option>
+                                <option value="normal" class="ok">Normal</option>
+                                <option value="peso">Peso</option>
+                                <option value="rozamiento">Fuerza de rozamiento</option>
+                                <option value="tension">Tensión</option>
+                                <option value="centripeta">Fuerza centrípeta</option>
+                            </select>
+
+                            <div id="resultado-f2" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>Calcular el módulo de dicha fuerza, si su masa es de 5kg y se encuentra en reposo. Indicar además la unidad correspondiente:</p>
+                            <input type="number" name="f3" id="f3" class="estilo-input fisica">
+                            <div>
+                                <input type="radio" name="f3" value="wrong" id="f3a"> <label for="f3a">Kg </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f3" value="wrong" id="f3b"> <label for="f3b">m/s<sup>2</sup> </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f3" value="wrong" id="f3c"> <label for="f3c">Joule </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="f3" value="right" id="f3d"> <label for="f3d" class="ok">Newton </label>
+                            </div>
+                            
+                            <div id="resultado-f3" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <label for="f4">¿Cuál es el apellido del científico que formuló la Teoría de la Relatividad?</label>
+                            <input type="text" name="f4" id="f4" class="estilo-input fisica">
+
+                            <div id="resultado-f4" class="div-resultado"></div>
+                        </li>
+
+                        <li>
+                            <p>Según el modelo estándar, ¿cuáles de estas particulas se consideran elementales de la materia? (Marque todas las correctas)</p>
+                            <div>
+                                <input type="checkbox" name="f5" value="right" id="f5a"> <label for="f5a" class="ok">Fotones</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="f5" value="right" id="f5b"> <label for="f5b" class="ok">Electrones</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="f5" value="wrong" id="f5c"> <label for="f5c">Protones</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="f5" value="wrong" id="f5d"> <label for="f5d">Neutrones</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="f5" value="wrong" id="f5e"> <label for="f5e">Deuterones</label>
+                            </div>
+
+                            <div id="resultado-f5" class="div-resultado"></div>
+                        </li>
+                    </ul>
+                    <input type="button" id="btnFisica" class="boton boton-fisica" value="Continuar">
+                    
+                </fieldset>
+
+            </form>
+        </main>
+        </div>
+
+        <footer class="site-footer">
+            <div class="contenedor-header">
+                <h3>Campus<span>Virtual</span></h3>
+                <p>Todos los derechos reservados 2020 &copy;</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>

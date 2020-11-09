@@ -1,0 +1,483 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(147, 197, 114);
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #e1e1e1 inset;
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.56);
+    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.56);
+}
+
+.centrar-contenido {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.boton {
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    margin: 20px 0 10px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    transition: all .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+
+/** Header **/
+
+.site-header {
+    background-color: black;
+    padding: 7px;
+    overflow: auto;
+}
+
+.site-header h1 {
+    color: white;
+    font-size: 40px;
+    float: left;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.site-header h1 span {
+    font-weight: bold;
+}
+
+.site-header p {
+    color: white;
+    font-size: 25px;
+    margin-top: 38px;
+    float: right;
+}
+
+
+/** Banner **/
+
+.banner {
+    background-image: url(../img/banner.jpg);
+    min-height: 450px;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.banner h2 {
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding-top: 130px;
+}
+
+.banner p {
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.banner i {
+    color: greenyellow;
+}
+
+
+/** Instructivo **/
+
+.instructivo h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: rgb(147, 197, 114);
+}
+
+.instructivo ol {
+    list-style-type: disc;
+}
+
+.instructivo li {
+    padding: 7px 0;
+}
+
+.instructivo div {
+    padding: 20px 0 0 15px;
+    font-weight: bold;
+}
+
+
+/** Main **/
+
+form.contacto {
+    padding: 20px 0;
+}
+
+.contacto fieldset {
+    margin-bottom: 20px;
+}
+
+.contacto legend {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.contacto div {
+    padding: 5px 0;
+}
+
+fieldset ul {
+    list-style-type: upper-roman;
+}
+
+fieldset li {
+    padding: 7px 0;
+}
+
+.estilo-input {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contacto select {
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contenedor-imagen {
+    height: 240px;
+    width: 30%;
+    margin: 20px auto;
+    margin-right: 5px;
+}
+
+.input-img {
+    float: left;
+    display: block;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.efecto-imagen:hover {
+    transform: scale(1.1);
+}
+
+.primer-parrafo {
+    margin-top: 0;
+}
+
+div.div-resultado{
+    padding: 10px 0 10px 10px;
+    width: 100%;
+    background-color: #e1e1e1;
+    font-weight: bold;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: none;
+}
+
+
+/** Información Personal **/
+
+fieldset.campo-personal {
+    display: none;
+}
+
+.campo-personal label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.campo-personal input:not([type="button"]) {
+    margin-bottom: 30px;
+}
+
+.campo-obligatorio {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.declaracion-jurada {
+    padding-top: 20px;
+}
+
+.declaracion-jurada label {
+    display: inline;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+/** Historia **/
+
+fieldset.campo-historia {
+    border-color: blueviolet;
+    display: none;
+}
+
+.campo-historia legend {
+    color: blueviolet;
+}
+
+.historia {
+    background-color: rgb(183, 145, 218);
+}
+
+.boton-historia {
+    background-color: blueviolet;
+}
+
+.boton-historia:hover {
+    background-color: rgb(183, 145, 218);
+}
+
+
+/** Lengua y Literatura **/
+
+fieldset.campo-lengua {
+    border-color: red;
+    display: none;
+}
+
+.campo-lengua legend {
+    color: red;
+}
+
+.lengua {
+    background-color: rgb(255, 128, 128);
+}
+
+.campo-lengua .efecto-imagen:hover {
+    border: 5px solid rgb(255, 128, 128);
+}
+
+.boton-lengua {
+    background-color: red;
+}
+
+.boton-lengua:hover {
+    background-color: rgb(255, 128, 128);
+}
+
+
+/** Matemática **/
+
+fieldset.campo-matematica {
+    border-color: blue;
+    display: none;
+}
+
+.campo-matematica legend {
+    color: blue;
+}
+
+.matematica {
+    background-color: rgb(128, 128, 255);
+}
+
+.campo-matematica .efecto-imagen:hover {
+    border: 5px solid rgb(128, 128, 255);
+}
+
+.boton-matematica {
+    background-color: blue;
+}
+
+.boton-matematica:hover {
+    background-color: rgb(128, 128, 255);
+}
+
+
+/** Química **/
+
+fieldset.campo-quimica {
+    border-color: rgb(0, 190, 0);
+    display: none;
+}
+
+.campo-quimica legend {
+    color: rgb(0, 190, 0);
+}
+
+.quimica {
+    background-color: rgb(100, 192, 100);
+}
+
+.campo-quimica .efecto-imagen:hover {
+    border: 5px solid rgb(100, 190, 100);
+}
+
+.boton-quimica {
+    background-color: rgb(0, 190, 0);
+}
+
+.boton-quimica:hover {
+    background-color: rgb(100, 192, 100);
+}
+
+
+/** Física **/
+
+fieldset.campo-fisica {
+    border-color: orange;
+    display: none;
+}
+
+.campo-fisica legend {
+    color: orange;
+}
+
+.fisica {
+    background-color: rgb(247, 188, 78);
+}
+
+.campo-fisica .efecto-imagen:hover {
+    border: 5px solid rgb(247, 188, 78);
+}
+
+.boton-fisica {
+    background-color: orange;
+}
+
+.boton-fisica:hover {
+    background-color: rgb(247, 188, 78);
+}
+
+
+/** Resultados **/
+
+fieldset.campo-resultados {
+    border-color: rgb(147, 197, 114);
+    display: none;
+}
+
+.campo-resultados legend {
+    color: rgb(147, 197, 114);
+}
+
+.campo-resultados div{
+    padding-left: 15px;
+}
+
+.asignatura {
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#asignatura-1{
+    color: blueviolet;
+}
+
+#asignatura-2{
+    color: red;
+}
+
+#asignatura-3{
+    color: blue;
+}
+
+#asignatura-4{
+    color: green;
+}
+
+#asignatura-5{
+    color: orange;
+} 
+
+.calificacion-final {
+    font-weight: bold;
+}
+
+#detalle{
+    font-size: 20px;
+    color:rgb(147, 197, 114);
+}
+
+/** Footer **/
+
+.site-footer {
+    background-color: black;
+    padding: 7px;
+    margin-top: 50px;
+    overflow: auto;
+}
+
+.site-footer h3 {
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: normal;
+    cursor: pointer;
+    float: left;
+}
+
+.site-footer h3 span {
+    font-weight: bold;
+}
+
+.site-footer p {
+    color: white;
+    font-size: 20px;
+    float: right;
+    margin: 0;
+    padding: 38px 0;
+}
