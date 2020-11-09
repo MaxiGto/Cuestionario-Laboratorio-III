@@ -1,48 +1,50 @@
 # Cuestionario-Laboratorio-III
 
-Cuestionario realizado como proyecto integrador de la asignatura Laboratorio III UTN-FRH.
+![Logo UTN FRH](https://lh3.googleusercontent.com/proxy/5PVZYFV-xbs7pCOmWFdturIL49XMjQd26Df2V7BElqC4KU-YOrFIcy4gcpiH9C9LW-u_NtVuCS87sos_Pg20S4DkbvswwSrPOg)
+
+## Cuestionario realizado como proyecto integrador de la asignatura Laboratorio III UTN-FRH.
 
 El mismo consiste en un examen integrador de 5 asignaturas: Historia, Lengua y Literatura, Matemática, Química y Física. El cuestionario de cada asignatura consiste en 5 preguntas, de las cuales se deberán responder correctamente al menos 3 para aprobar.
 
-Respuestas correctas:
+### Respuestas correctas:
 
-Historia:
+**Historia:**
 
-  I. 1929
- II. Estados Unidos, Francia y Gran Bretaña
-III. Nagasaki
- IV. La Unión Soviética
-  V. El ataque a Pearl Harbour
+1. 1929  
+2. Estados Unidos, Francia y Gran Bretaña  
+3. Nagasaki  
+4. La Unión Soviética  
+5. El ataque a Pearl Harbour  
 
-Lengua y Literatura:
+**Lengua y Literatura:**
 
-  I. La secuencia de dos vocales distintas que se pronuncian dentro de una misma sílaba
- II. Semántica
-III. Rayuela
- IV. Orwell
-  V. Tercera imagen
+1. La secuencia de dos vocales distintas que se pronuncian dentro de una misma sílaba  
+2. Semántica  
+3. Rayuela  
+4. Orwell  
+5. Tercera imagen  
   
-Matemática:
+**Matemática:**
 
-  I. 306
- II. Segunda imagen
-III. x = 10 y x = 7
- IV. A = π . r^2
-  V. γ = 85°
+1. 306  
+2. Segunda imagen  
+3. x = 10 y x = 7  
+4. A = π . r^2  
+5. γ = 85°  
   
-Química:
+**Química:**
 
-  I. Hg
- II. 47
-III. M = moles de soluto / litros de solución
- IV. 1g
-  V. Tercera imagen
+1. Hg  
+2. 47  
+3. M = moles de soluto / litros de solución  
+4. 1g  
+5. Tercera imagen  
   
-Física:
+**Física:**
 
-  I. g = 9,8 m/s2
- II. Normal
-III. 49 Newton
- IV. Einstein
-  V. Fotones y Electrones
+1. g = 9,8 m/s2  
+2. Normal  
+3. 49 Newton  
+4. Einstein  
+5. Fotones y Electrones  
   
