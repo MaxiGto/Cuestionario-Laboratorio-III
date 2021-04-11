@@ -1,6 +1,6 @@
 # Cuestionario-Laboratorio-III
 
-![Logo UTN FRH](https://lh3.googleusercontent.com/proxy/5PVZYFV-xbs7pCOmWFdturIL49XMjQd26Df2V7BElqC4KU-YOrFIcy4gcpiH9C9LW-u_NtVuCS87sos_Pg20S4DkbvswwSrPOg)
+![Logo UTN FRH](http://www.frh.utn.edu.ar/static/img/logo-utn.jpg)
 
 ## Cuestionario realizado como proyecto integrador de la asignatura Laboratorio III UTN-FRH.
 
